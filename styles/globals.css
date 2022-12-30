@@ -1,19 +1,21 @@
 .cursorD {
     background-color: black;
-    height: 15px;
-    width: 15px;
+    height: 10px;
+    width: 10px;
     border-radius: 50%;
     position: absolute;
+    transition-duration: 90ms;
+    transition-timing-function: ease-out;
 }
 
 .cursorL {
     background-color: white;
-    height: 15px;
-    width: 15px;
+    height: 10px;
+    width: 10px;
     border-radius: 50%;
     position: absolute;
+    transition-duration: 90ms;
+    transition-timing-function: ease-out;
 }
 
-body{
-    cursor: none;
-}
+* { cursor: none !important;}

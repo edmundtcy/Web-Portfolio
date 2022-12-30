@@ -4,6 +4,7 @@ import {useColorModeValue,} from '@chakra-ui/react'
 function Cursors() {
     const cursorRef = useRef(null)
     const mode = useColorModeValue(false,true)
+    
     useEffect(() => {
         if (cursorRef.current == null || cursorRef == null)
             return;
@@ -12,16 +13,19 @@ function Cursors() {
             return;
         cursorRef.current.setAttribute("style", "top: " + (e.pageY-10) + "px; left: " + (e.pageX-10) + "px;")
         })
-        document.addEventListener('click', () => {
-            if (cursorRef.current == null)
-                return;
-            cursorRef.current.classList.add("expand");
-            setTimeout(() => {
-                if (cursorRef.current == null)
-                    return;
-                cursorRef.current.classList.remove("expand");
-            }, 500)
-        })
+        // buttons.forEach((button) => {
+        //     button.addEventListener("mouseover", () => {
+        //         if (cursorRef.current == null)
+        //             return;
+        //         cursorRef.current.classList.add("grow");
+        //     })
+        //     button.addEventListener("mouseleave", () => {
+        //         if (cursorRef.current == null)
+        //             return;
+        //         cursorRef.current.classList.remove("grow");
+        //     })
+        // })
+
     }, [])
 
     if (mode){
