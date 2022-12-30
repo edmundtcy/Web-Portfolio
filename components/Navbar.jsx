@@ -14,13 +14,14 @@ import { ColorModeSwitcher } from './ColorModeSwitcher'
 import { ColorModeSwitcherN } from './ColorModeSwitcherN'
 import {MdLanguage} from 'react-icons/md'
 import { FiMenu } from 'react-icons/fi'
+import Cursors from '../components/Cursors'
+
 const Navbar = () => {
     const isDesktop = useBreakpointValue({ base: false, lg: true })
     const {isOpen, onOpen, onClose} = useDisclosure()
     const btnRef = useRef()
     const buttonColor = useColorModeValue('#1c1cff','#FF7324')
     const logoImage = useColorModeValue('/logoL.png','/logoD.png')
-    const colorModeInfo = useColorModeValue('LIGHT','DARK')
     const theme = extendTheme({
         fonts:{
             body: 'kern'
@@ -30,19 +31,19 @@ const Navbar = () => {
     <Box>
         <Box as='nav' p='5' borderBottom='1px' borderColor='gray.200'>
             <HStack spacing='10' justify='space-between'>
-                {isDesktop ? 
+                {isDesktop ?
                 (
                 <>
                     <HStack spacing='10'>
                         <Image src={logoImage} boxSize='35px'/>
                         <ButtonGroup variant='link' spacing='10' fontSize='16.5px'>
                             {['Home', 'About', 'Skills', 'Education', 'Contact'].map((item) => (
-                            <Button key={item} colorScheme='black' _hover={{color: buttonColor}} theme={theme} padding='10'>{item}</Button>))}
+                            <Button key={item} colorScheme='black' _hover={{color: buttonColor}} theme={theme} padding='10' sx={{cursor:'none'}}>{item}</Button>))}
                         </ButtonGroup>
                     </HStack>
                     <HStack spacing='3'>
                         <ColorModeSwitcher/>
-                        <Button colorScheme='black' variant='link' _hover={{color: buttonColor}} leftIcon={<MdLanguage size='23'/>} theme={theme}>
+                        <Button colorScheme='black' variant='link' _hover={{color: buttonColor}} leftIcon={<MdLanguage size='23' />} sx={{cursor:'none'}} theme={theme}>
                             Languages
                         </Button>
                     </HStack>
@@ -59,8 +60,8 @@ const Navbar = () => {
                     onClose={onClose}
                     finalFocusRef={btnRef}
                     >
-                        <DrawerContent>
-
+                        <DrawerContent sx={{cursor:'none'}}>
+                            <Cursors/>
                             <DrawerHeader borderBottomWidth='1px' >
                                 <Image src={logoImage} boxSize='35px' margin='auto'/>
                             </DrawerHeader>
@@ -68,14 +69,14 @@ const Navbar = () => {
                             <DrawerBody padding='0'>
                                 <Stack fontSize='16.5px'>
                                         {['Home', 'About', 'Skills', 'Education', 'Contact'].map((item) => (
-                                        <Button variant='ghost' key={item} colorScheme='black' _hover={{color: buttonColor}} theme={theme}  padding='30'>{item}</Button>))}
+                                        <Button variant='ghost' key={item} colorScheme='black' _hover={{color: buttonColor}} theme={theme}  padding='30' sx={{cursor:'none'}}>{item}</Button>))}
                                 </Stack>
                             </DrawerBody>
 
                             <DrawerFooter borderTopWidth='1px'>
                                 <HStack spacing='20' margin='auto'>
                                     <ColorModeSwitcherN theme={theme}/>
-                                    <Button colorScheme='black' variant='link' _hover={{color: buttonColor}} leftIcon={<MdLanguage size='23'/>} theme={theme}>LANGUAGES</Button>
+                                    <Button colorScheme='black' variant='link' _hover={{color: buttonColor}} leftIcon={<MdLanguage size='23'/>} theme={theme} sx={{cursor:'none'}}>LANGUAGES</Button>
                                 </HStack>
                             </DrawerFooter>
 

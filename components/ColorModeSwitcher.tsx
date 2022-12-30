@@ -21,7 +21,7 @@ export const ColorModeSwitcher = (props: ColorModeSwitcherProps) => {
         color="current"
         marginLeft="2"
         onClick={toggleColorMode}
-        sx={{ "&:hover": { color: buttonColor } }}
+        sx={{ "&:hover": { color: buttonColor }, cursor:'none'}}
         icon={<SwitchIcon/>}
         aria-label={`Switch to ${text} mode`}
         {...props}

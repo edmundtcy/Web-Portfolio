@@ -1,0 +1,19 @@
+.cursorD {
+    background-color: black;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.cursorL {
+    background-color: white;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+body{
+    cursor: none;
+}
