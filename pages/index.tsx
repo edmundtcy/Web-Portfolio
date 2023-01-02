@@ -6,13 +6,13 @@ import Cursors from '../components/Cursors'
 export default function Home() {
   return (
     <>
-      <Cursors/>
       <Head>
-        <title>Edmund's Portfolio</title>
-        <meta name="description" content="By Edmund Tsang" />
+        <title>Edmund Tsang</title>
+        <meta name="description" content="By Edmund" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logoD.png" />
       </Head>
+      <Cursors/>
       <Navbar/>
       <MainBody/>
     </>

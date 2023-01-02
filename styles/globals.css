@@ -1,21 +1,44 @@
+/*--------------------------------------------------Cursors CSS--------------------------------------------------*/
 .cursorD {
     background-color: black;
-    height: 10px;
-    width: 10px;
+    height: 16px;
+    width: 16px;
     border-radius: 50%;
-    position: absolute;
-    transition-duration: 90ms;
-    transition-timing-function: ease-out;
-}
+    position: fixed;
+    /* transition-duration: 90ms;
+    transition-timing-function: ease-out; */
+} 
 
 .cursorL {
     background-color: white;
-    height: 10px;
-    width: 10px;
+    height: 16px;
+    width: 16px;
     border-radius: 50%;
-    position: absolute;
-    transition-duration: 90ms;
-    transition-timing-function: ease-out;
+    position: fixed;
+    /* transition-duration: 90ms;
+    transition-timing-function: ease-out; */
+}
+
+.cursorL.B {
+    background-color: rgba(255, 255, 255, .1);
+    border: 1px solid rgba(255,255,255, 1);
+    height: 36px;
+    width: 36px;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    transition: width 0.4s, height 0.4s, background-color 0.4s, border 0.4s;
+}
+
+.cursorD.B {
+    background-color: rgba(0, 0, 0, .1);
+    border: 1px solid rgba(0,0,0, 1);
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    transition: width 0.4s, height 0.4s, background-color 0.4s, border 0.4s;
 }
 
 * { cursor: none !important;}
+
