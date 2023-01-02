@@ -60,17 +60,16 @@ const Navbar = () => {
                                 {['Home', 'About', 'Skills', 'Education', 'Contact'].map((item) => (
                                 <Button key={item} colorScheme='black' 
                                 _hover={{color: buttonColor}} theme={theme} 
-                                padding='10' sx={{cursor:'none'}} 
+                                padding='10'
                                 onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>{item}</Button>))}
                             </ButtonGroup>
                         </HStack>
                         <HStack spacing='3'>
                             <ColorModeSwitcher onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}/>
-                            <Button colorScheme='black' variant='link' 
-                            _hover={{color: buttonColor}} leftIcon={<MdLanguage size='23' />} 
-                            sx={{cursor:'none'}} theme={theme} 
-                            onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
-                                Languages
+                            <Button colorScheme='black' variant='link' padding='12' paddingLeft={0} paddingRight={0}
+                            _hover={{color: buttonColor}} leftIcon={<MdLanguage size='23'/>} 
+                            theme={theme} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
+                            Languages
                             </Button>
                         </HStack>
                     </>
