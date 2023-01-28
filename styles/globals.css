@@ -5,8 +5,11 @@
     width: 16px;
     border-radius: 50%;
     position: fixed;
+    transform: translate(-50%,-50%);
+    z-index: 1500;
     /* transition-duration: 90ms;
     transition-timing-function: ease-out; */
+
 } 
 
 .cursorL {
@@ -16,6 +19,7 @@
     border-radius: 50%;
     position: fixed;
     transform: translate(-50%,-50%);
+    z-index: 1500;
     /* transition-duration: 90ms;
     transition-timing-function: ease-out; */
 }
@@ -34,10 +38,15 @@
     border: 1px solid rgba(0,0,0, 1);
     height: 36px;
     width: 36px;
-    border-radius: 50%;
     position: fixed;
     transition: width 0.4s, height 0.4s, background-color 0.4s, border 0.4s;
 }
 
-* { cursor: none !important;}
+/* * { cursor: none !important;} */
 
+/*--------------------------------------------------NavBar CSS--------------------------------------------------*/
+
+Navbar{
+    position: sticky;
+    top:0;
+}
